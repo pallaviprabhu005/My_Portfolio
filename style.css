@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #101820, #1a1f2b);
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav h1 {
+  font-weight: 600;
+  color: #00bcd4;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10%;
+  background: radial-gradient(circle at top, #1b2430, #0f1620);
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #37696f;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+  margin-bottom: 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(127, 208, 219, 0.7);
+   
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero h1 span {
+  color: #00bcd4;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.resume-btn {
+  margin-top: 30px;
+  background: #00bcd4;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.resume-btn:hover {
+  background: #019fb8;
+  box-shadow: 0 6px 25px rgba(0, 188, 212, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ===== Section ===== */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  text-align: center;
+  line-height: 2;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+}
+
+.project-card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #e0e0e0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+
+.content-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Scroll Animations ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  nav ul {
+    display: none;
+  }
+}
